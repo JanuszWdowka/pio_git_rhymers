@@ -6,9 +6,9 @@ public class IntLinkedList {
 	int i;
 
 	public void push(int i) {
-		if (last == null)
+		if (last == null) {
 			last = new Node(i);
-		else {
+		} else {
 			last.next = new Node(i);
 			last.next.prev = last;
 			last = last.next;
@@ -24,17 +24,19 @@ public class IntLinkedList {
 	}
 
 	public int top() {
-		if (isEmpty())
+		if (isEmpty()) {
 			return -1;
+		}
 		return last.value;
 	}
 
 	public int pop() {
-		if (isEmpty())
+		if (isEmpty()) {
 			return -1;
+		}
 		int ret = last.value;
 		last = last.prev;
 		return ret;
 	}
-
+//alt + ← oraz alt + → nie działają w IntelliJ IDEA nie działają skróty alt + ← oraz alt + →, jednak działają skróty alt ← oraz alt →, któr umożliwiają zmianę zakładki z kodem
 }
